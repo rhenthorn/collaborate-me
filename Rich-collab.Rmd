@@ -1,6 +1,6 @@
 ---
 title: "Rich-collab.Rmd"
-author: "Stephanie"
+author: "Stephanie & Rich"
 date: "12/1/2017"
 output: html_document
 ---
