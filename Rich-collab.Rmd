@@ -27,6 +27,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ## NYC Flight exploration
 ```{r}
+
 library(nycflights13) # install.packages("nycflights13")
 
 ## Jan 1 flights
@@ -35,6 +36,28 @@ flights %>%
   filter(month == 1,
          day == 1)
 
+
+```
+
+## Boolean fun
+
+```{r}
+
+library(tidyverse)
+
+filter(flights, month == 11 | month == 12)
+
+# The following will give the same result, %in% is a shortcut
+
+nov_dec <- filter(flights, month %in% c(11, 12))
+
+#The following two command lines will give you the flights that weren't delayed on arrival or departure by more than 2 hours
+
+filter(flights, !(arr_delay > 120| dep_delay > 120))
+
+#or
+
+filter(flights, arr_delay <= 120, dep_delay <= 120)
 
 ```
 
