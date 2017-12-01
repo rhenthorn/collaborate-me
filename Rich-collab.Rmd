@@ -25,3 +25,18 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## CHUNKY MONKEY
+
+## NYC Flight exploration
+```{r}
+library(nycflights13) # install.packages("nycflights13")
+
+## Jan 1 flights
+
+flights %>% 
+  filter(month == 1,
+         day == 1)
+
+
+```
+
+
